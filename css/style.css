@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
+*{
+    font-family: 'Poppins',cursive;
+}
+
+
+
+body{
+    color: #c8d6f5;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+    overflow-y: hidden;
+    overflow-x: hidden;
+    position: relative;
+}
+
+#particles {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+
+}
+.greetings{
+    font-size: 6rem;
+    font-weight: 900;
+    z-index: 1000000;
+}
+.greetings > span{
+    animation: glow 2.5s ease-in-out infinite;
+    
+}
+@keyframes glow{
+    0%, 100%{
+        color: #fff;
+        text-shadow: 0 0 12px rgb(0, 217, 255), 0 0 50px rgb(0, 200, 255), 0 0 100px red;
+    }
+    10%, 90%{
+        color: #696565;
+        text-shadow: none;
+    }
+}
+.greetings > span:nth-child(2){
+    animation-delay: .2s ;
+}
+.greetings > span:nth-child(3){
+    animation-delay: .4s ;
+}
+.greetings > span:nth-child(4){
+    animation-delay: .6s;
+}
+.greetings > span:nth-child(5){
+    animation-delay: .8s;
+}
+
+.description{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    z-index: 100000;
+}
+
+.button a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: #111;
+}
+
+@media screen and (max-width:574px){
+    .greetings{
+        display: block;
+        font-size: 3rem;
+        font-weight: 500;
+        text-align: center;
+    }
+    .description{
+        font-size: 1rem;
+    }
+    
+    .button a{
+        font-size: .5rem;
+    }
+}
+
+.description{
+    color: #fbff00;
+}
+
+/* Estilo para el botón */
+.button button {
+    background-color: yellow; /* Fondo amarillo */
+    border: none; /* Sin bordes */
+    padding: 10px 20px; /* Ajusta el relleno según tu preferencia */
+    font-size: 18px; /* Tamaño de fuente */
+    cursor: pointer;
+    position: relative; /* Necesario para el resplandor */
+    border-radius: 20px; /* Esquinas redondeadas */
+    transition: all .5s ease; /* Transición suave para el color de fondo */
+    z-index: 1000000;
+  }
+  
+  /* Estilo para el enlace dentro del botón */
+  .button button a {
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    color: inherit; /* Hereda el color del texto del botón */
+  }
+  
+  /* Efecto de resplandor al pasar el cursor sobre el botón */
+  .button button:hover {
+    background-color: #abbcea; /* Cambia el color de fondo al pasar el mouse a naranja */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.436), 0 0 20px rgba(247, 247, 247, 0.31), 0 0 30px rgba(250, 250, 250, 0.43); /* Efecto de resplandor amarillo */
+  }
+  
+  /* Span Tag */
+.description span{
+    color:#4c74c9;
+   }
+   
+   /* Button */
+   .button button{
+    background-color:#628cd6;
+   }
+   
+   @media (max-width:574px){
+
+    /* Button */
+    .button button{
+     width:100% !important;
+     height:auto !important;
+     display:flex;
+     font-size:18em;
+     justify-content:center;
+    }
+    
+    /* Button */
+    .button{
+     width:35%;
+     display:flex;
+     justify-content:center;
+     align-items:center;
+     font-size:25px;
+    }
+    
+    /* Link */
+    .button button a{
+     font-size:20px;
+     color:#020202;
+    }
+    
+   }
